@@ -53,7 +53,7 @@ If you do not already have some save/load functions, then just copy these two de
 
 # Using Stat Api:
 
-There is one main function that stat api uses, and one secondary function that can be used to undo that effect. There is also one enumeration for the various stages that stat api goes through in its process of rebuilding the stats. To use stat api, simply replace your mod:AddCallback(ModCallback.MC_EVALUATE_CACHE,...) functions with a stats.AddCache(...) function with the proper changes. Your functions for evaluating stats will then be given an additional input variable which is the current stage that stat api is processing, so you can just check for the correct stage to apply various changes much like you would check for the right cache flag before changing the stats.
+There is one main function that stat api uses, and one secondary function that can be used to undo that effect. There is also one enumeration for the various stages that stat api goes through in its process of rebuilding the stats. To use stat api, simply replace your `mod:AddCallback(ModCallback.MC_EVALUATE_CACHE,...)` functions with a `stats.AddCache(...)` function with the proper changes. Your functions for evaluating stats will then be given an additional input variable which is the current stage that stat api is processing, so you can just check for the correct stage to apply various changes much like you would check for the right cache flag before changing the stats.
 
 > **StatStage:** Enumeration of the various stages in stat api. 
 > 
